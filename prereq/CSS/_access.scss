@@ -1,0 +1,121 @@
+@mixin pc {
+    @media screen and (min-width: 960px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width: 959px) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+.access-bg{
+    width: 100%;
+    height: 630px;
+    display: flex;
+    justify-content: space-around;
+    @include tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 1750px;
+    }
+}
+
+
+
+.access-img1, .access-img2, .access-img3{
+    width: 274px;
+    height: 555px;
+    padding-top: 11px;
+    position: relative;
+    @include tab{
+        width: 80%;
+    }
+    h3{
+        font: normal normal normal 16px/19px Roboto Mono for Powerline;
+        line-height: 1.5;
+        width: 253px;
+        height: 131px;
+        margin: 0 auto;
+        margin-top: 34px;
+        @include tab{
+            width: 100%;
+        }
+
+    }
+    h2{
+        font: normal normal normal 30px/36px Roboto Mono for Powerline;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-top: 37px;
+        @include tab{
+            text-align: left;
+        }
+        
+    }
+    h4{
+        font:normal normal normal 16px/19px Roboto Mono for Powerline;
+        letter-spacing: 1.6px;
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        @include tab{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+
+
+    }
+}
+
+.ac-img1{
+    width: 274px;
+    height: 271px;
+    background-image: url(../img/IMG3.png);
+    background-size: cover;
+    @include tab{
+        margin: 0 auto;
+        width: 335px;
+        height: 330px;
+    }
+
+}
+
+.ac-img2{
+    width: 274px;
+    height: 271px;
+    background-image: url(../img/IMG4.png);
+    background-size: cover;
+    @include tab{
+        margin: 0 auto;
+        width: 335px;
+        height: 330px;
+    }
+
+}
+
+.ac-img3{
+    width: 274px;
+    height: 271px;
+    background-image: url(../img/IMG5.png);
+    background-size: cover;
+    @include tab{
+        margin: 0 auto;
+        width: 335px;
+        height: 330px;
+    }
+
+}
+
+

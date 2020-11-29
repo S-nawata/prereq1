@@ -1,0 +1,85 @@
+@mixin pc {
+    @media screen and (min-width: 960px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width: 959px) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+.reserve{
+    width: 100%;
+    height: 760px;
+    background-color: #A193861F;
+
+}
+
+.reserve-info{
+    margin-top: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    @include tab{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 760px;
+    }
+}
+
+iframe{
+    height: 400px;
+    width: 60%;
+    @include tab{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+}
+
+.reserve-gide{
+    width: 40%;
+    padding-left: 100px;
+    padding-top: 100px;
+    background-color: #D0C5BA;
+    h2{
+        font:normal normal bold 24px/29px Roboto Mono for Powerline;
+        color: #00000038;  
+        margin-top: 0; 
+        letter-spacing: 2.4px; 
+    }
+    h3{
+        font:normal normal normal 16px/19px Roboto Mono for Powerline;
+        color: #FFFFFF;
+        line-height: 1.9;
+        letter-spacing: 1.6px;
+    }
+}
+
+.reserve-gide{
+    @include tab{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10%;
+        
+        padding-left: 10%;
+    }
+}
+
+
+
+button{
+    font:normal normal normal 18px/22px Roboto Mono for Powerline;
+    background-color: #FFFFFF;
+    color: #707070;
+}

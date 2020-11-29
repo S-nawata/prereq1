@@ -1,0 +1,55 @@
+@mixin pc {
+    @media screen and (min-width: 960px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width: 959px) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+
+html{
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    font: normal normal normal 18px/24px Roboto;
+    color: #707070;
+    padding: 0;
+    padding-left: 101px;
+    padding-top: 256px;
+    margin: 0;
+    letter-spacing: 3.8px;
+    &::after{
+        background-color: #707070;
+        display: block;
+        content: "";
+        width: 100px;
+        height: 1px;
+        margin-left: 2.0rem;
+        
+    }
+}
+
+.title{
+    @include tab{
+        padding-top: 60px;
+        padding-left: 10%;
+    }
+}
